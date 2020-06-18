@@ -3,6 +3,8 @@
 #include<vector>
 
 using std::vector;
+using std::cout;
+using std::string;
 
 /*
 Function loop_string_w_index 
@@ -18,7 +20,14 @@ t
 @param string str
 
 */
+void loop_string_w_index(std::string str)
+{
+    for(int i=0; i < str.size(); i++)
+    {
+        cout<<str[1]<<"\n";
 
+    }
+}
 
 /*
 Function loop_string_w_for_range 
@@ -31,6 +40,12 @@ e
 s
 t
 */
-
+void loop_string_for_range(std::string str)
+{
+    for(char ch: str)
+    {
+        cout<<ch<<"\n";
+    }
+}
 
 
