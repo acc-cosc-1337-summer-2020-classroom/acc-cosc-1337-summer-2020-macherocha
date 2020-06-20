@@ -28,31 +28,37 @@ int main()
 {
 	string letter_grade;
 	int credit_hours, sum_credit_hours = 0, sum_credit_points = 0;
+	char again;
+	
+	do
 
-	cout << "Enter letter grade: ";
-	cin >> letter_grade;
-	cout << "Enter credit hours: ";
-	cin >> credit_hours;
-	sum_credit_points += get_grade_points(letter_grade) * credit_hours;
-	sum_credit_hours += credit_hours;
+	{ // get user letter grades
+		cout << "Enter letter grade: ";
+		cin >> letter_grade;
+		cout << "Enter credit hours: ";
+		cin >> credit_hours;
 
-	cout << "Enter letter grade: ";
-	cin >> letter_grade;
-	cout << "Enter credit hours: ";
-	cin >> credit_hours;
-	sum_credit_points += get_grade_points(letter_grade)  * credit_hours;
-	sum_credit_hours += credit_hours;
+		//Calculate credit points and credit hours
+		sum_credit_points += get_grade_points(letter_grade) * credit_hours;
+		sum_credit_hours += credit_hours;
+		cout << "Total credit points is: " << sum_credit_points << "\n";
+		cout << "Total credit hours is: " << sum_credit_hours << "\n";
+		
 
-	cout << "Enter letter grade: ";
-	cin >> letter_grade;
-	cout << "Enter credit hours: ";
-	cin >> credit_hours;
-	sum_credit_points += get_grade_points(letter_grade)  * credit_hours;
-	sum_credit_hours += credit_hours;
+		//Does student want to enter another letter grade?
+		cout << "Do you want to enter another letter grade? (Y/N) ";
+		cin >> again;
+		
 
-
+		//verify option
+	}	while (toupper(again) == 'Y');
+	 // calculate gpa
 	double gpa = calculate_gpa(sum_credit_hours, sum_credit_points);
 	cout << "GPA: " << gpa;
-
-	return 0;
+		
+		
+	
+	
+	
+	 return 0;
 }
