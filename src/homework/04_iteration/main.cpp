@@ -1,4 +1,7 @@
 //write include statements
+#include "dna.cpp"
+#include "dna.h"
+#include <iostream>
 
 //write using statements
 
