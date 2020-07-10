@@ -5,3 +5,12 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
+TEST_CASE("Verify that sequence AGCTATAG has .375 of g and c ")
+{
+	REQUIRE( );
+}
+
+TEST_CASE("Verify that sequence CGCTATAG has .50 of g and c ")
+{
+	REQUIRE();
+}
