@@ -9,6 +9,18 @@ bool TicTacToe::game_over()
         return true;
     }
 
+    if (check_row_win() == true)
+    {
+        set_winner;
+        return true;
+    }
+
+    if (check_diagonal_win() == true)
+    {
+        set_winner;
+        return true;
+    }
+
     return check_board_full();
 }
 
@@ -130,6 +142,5 @@ void TicTacToe::set_winner()
         winner = "X";
     }
      
-    return true;
 }
 
