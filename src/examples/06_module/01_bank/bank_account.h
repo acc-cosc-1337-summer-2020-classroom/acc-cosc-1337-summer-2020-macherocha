@@ -2,7 +2,7 @@
 class BankAccount
 {
 public:
-    int get_balance() const{return balance}
+    int get_balance() const{return balance};
 private:
     int balance;
 };
