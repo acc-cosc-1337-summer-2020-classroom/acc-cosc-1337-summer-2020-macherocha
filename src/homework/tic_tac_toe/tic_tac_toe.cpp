@@ -5,23 +5,28 @@ bool TicTacToe::game_over()
 {
     if (check_column_win() == true)
     {
-        set_winner;
+        set_winner();
         return true;
     }
 
     if (check_row_win() == true)
     {
-        set_winner;
+        set_winner();
         return true;
     }
 
     if (check_diagonal_win() == true)
     {
-        set_winner;
+        set_winner();
         return true;
     }
 
-    return check_board_full();
+    if(check_board_full())
+    {
+        winner = "C";
+        return true;
+    }
+    return false;
 }
 
 void TicTacToe::mark_board(int position)
@@ -65,23 +70,23 @@ bool TicTacToe::check_board_full()const
             return false;
         }
     }
-
+    
     return true;
 }
 
 bool TicTacToe::check_column_win()
 {
-    if (pegs[0] == pegs[3] && pegs[3] == pegs[6])
+    if (pegs[0] == pegs[3] && pegs[3] == pegs[6] && pegs[0] != " ")
     {
         return true;
     }
 
-    if (pegs[1] == pegs[4] && pegs[4] == pegs[7])
+    if (pegs[1] == pegs[4] && pegs[4] == pegs[7] && pegs[1] != " ")
     {
         return true;
     }
 
-    if (pegs[2] == pegs[5] && pegs[5] == pegs[8])
+    if (pegs[2] == pegs[5] && pegs[5] == pegs[8] && pegs[2] != " ")
     {
         return true;
     }
@@ -90,17 +95,17 @@ bool TicTacToe::check_column_win()
 
 bool TicTacToe::check_row_win()
 {
-    if (pegs[0] == pegs[1] && pegs[1] == pegs[2])
+    if (pegs[0] == pegs[1] && pegs[1] == pegs[2] && pegs[0] != " ")
     {
         return true;
     }
 
-    if (pegs[3] == pegs[4] && pegs[4] == pegs[5])
+    if (pegs[3] == pegs[4] && pegs[4] == pegs[5] && pegs[3] != " ")
     {
         return true;
     }
 
-    if (pegs[6] == pegs[7] && pegs[7] == pegs[8])
+    if (pegs[6] == pegs[7] && pegs[7] == pegs[8] && pegs[6] != " ")
     {
         return true;
     }
@@ -109,12 +114,12 @@ bool TicTacToe::check_row_win()
 
 bool TicTacToe::check_diagonal_win()
 {
-    if (pegs[0] == pegs[4] && pegs[8] == pegs[6])
+    if (pegs[0] == pegs[4] && pegs[4] == pegs[8] && pegs[0] != " ")
     {
         return true;
     }
 
-    if (pegs[2] == pegs[4] && pegs[4] == pegs[6])
+    if (pegs[2] == pegs[4] && pegs[4] == pegs[6] && pegs[2] != " ")
     {
         return true;
     }

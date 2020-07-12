@@ -9,18 +9,25 @@ int main()
 	std::cin>>player;
 
 	tic_tac_toe.start_game(player);
-
+	int choice;
 	do
 	{
-		int position;
-		std::cout<<"Enter position from 1 to 9: ";
-		std::cin>>position;
-		tic_tac_toe.mark_board(position);
-		tic_tac_toe.display_board();
+		
+		do
+		{
+			int position;
+			std::cout<<"Enter position from 1 to 9: ";
+			std::cin>>position;
+			tic_tac_toe.mark_board(position);
+			tic_tac_toe.display_board();
 
-	} while (tic_tac_toe.game_over() == false);
+		} while (tic_tac_toe.game_over() == false);
 	
-	std::cout<<"Game over"<<"\n";
+		std::cout<<"Game over"<<"\n";
+		std::cout<<"Play again, enter 1: ";
+		std::cin>>choice;
+	} while (choice == 1);
+
 
 	return 0;
 }
