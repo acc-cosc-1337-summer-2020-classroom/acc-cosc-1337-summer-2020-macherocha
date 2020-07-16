@@ -1,2 +1,5 @@
 //h
-double Engineer::get_pay;
+class Engineer : public Employee
+{
+    
+}

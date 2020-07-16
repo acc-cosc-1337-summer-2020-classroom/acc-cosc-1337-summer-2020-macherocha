@@ -1,2 +1,9 @@
 //h
-double Employee:get_pay;
+class Employee
+{
+private:
+
+public:
+}
+
+::get_pay;

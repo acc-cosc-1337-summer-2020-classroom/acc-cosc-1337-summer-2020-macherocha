@@ -22,3 +22,11 @@ void BankAccount::withdraw(int amount)
         bank_balance -= amount;
     }
 }
+
+int BankAccount::get_bank_balance = 0;
+
+void BranchBank::update_balance(int b)
+{
+    branch_balance += b;
+    BankAccount::bank_balance += b;
+}

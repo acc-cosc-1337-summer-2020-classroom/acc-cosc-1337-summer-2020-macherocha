@@ -2,6 +2,21 @@
 #include<iostream>                              
 
 
+#ifndef BRANCH_BANK_H
+#define BRANCH_BANK_H
+
+class BranchBank
+{
+public:
+    BranchBank(int b) : branch_balance{b}{}
+    void update_balance(int b);
+    int get_branch_balance()const{return branch_balance;}
+private:
+    int branch_balance;
+};
+
+#endif
+
 #ifndef BANK_ACCOUNT_H//header guards
 #define BANK_ACCOUNT_H
 
@@ -17,6 +32,7 @@ public:
     void deposit(int amount);
     void withdraw(int amount);
     static int get_bank_balance(){return bank_balance;}
+    friendvoid BranchBank::update_balance(int b);
 private:
     int balance;//lock this variable
     static int bank_balance;
