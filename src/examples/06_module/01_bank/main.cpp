@@ -7,14 +7,8 @@ using std::cin;
 int main()
 {
 
-	BankAccount account = get_account(1); //create an instance/variable of class in stack memory
-	cout<<"Account: " <<account.get_balance()<<"\n";
-	//ATM atm(account);
-	//atm.run();
-
-	BankAccount account1 = account;
-	cout<<"Account1: "<<account1.get_balance()<<"\n";
-	int balance = account.get_balance();
+	ATM atm;
+	atm.run();
 
 	return 0;
 }
