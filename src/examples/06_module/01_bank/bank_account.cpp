@@ -22,6 +22,14 @@ void BankAccount::withdraw(int amount)
         bank_balance -= amount;
     }
 }
+//cout<<account;
+//operator<<(cout, account)
+std::ostream& operator <<(std::ostream& out, const BankAccount& account)
+{
+    out<<"Balance: "<<account.balance<<"\n";
+
+    return out;
+}
 
 int BankAccount::get_bank_balance = 0;
 
