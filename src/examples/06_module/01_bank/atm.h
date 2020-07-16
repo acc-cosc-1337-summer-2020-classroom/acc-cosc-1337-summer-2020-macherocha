@@ -8,7 +8,7 @@ class ATM
 {
 public:
     ATM(){};
-    void run():
+    void run();
 private:
     void scan_card();
     void display_menu(); //helper functions...utility functions
