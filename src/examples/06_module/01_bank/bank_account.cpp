@@ -31,7 +31,7 @@ std::ostream& operator <<(std::ostream& out, const BankAccount& account)
     return out;
 }
 
-int BankAccount::get_bank_balance = 0;
+int BankAccount::get_bank_balance
 
 void BranchBank::update_balance(int b)
 {

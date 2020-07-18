@@ -1,10 +1,14 @@
 //h
-class Employee
+
+#ifndef EMPLOYEE_H
+#define EMPLOYEE_H
+
+class Employee //abstract class
 {
-private:
-    virtual double Employee::get_pay;
 public:
-    virtual double Employee::get_pay;
-}
+    virtual double get_pay() const = 0;
+    ~Employee();
+};
 
 
+#endif

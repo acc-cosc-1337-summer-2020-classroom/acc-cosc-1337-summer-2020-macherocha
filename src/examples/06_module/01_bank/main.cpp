@@ -9,7 +9,7 @@ int main()
 {
 	srand(time(NULL));//force true random number generationn
 
-	BankAccount* account = new CheckingAccount(500);
+	/*BankAccount* account = new CheckingAccount(500);
 
 	BankAccount* account2 = account;
 	cout<<account->get_balance()<<"\n";
@@ -18,8 +18,13 @@ int main()
 	account->deposit(50);
 	cout<<account->get_balance()<<"\n";
 	cout<<account2->get_balance()<<"\n";
-
-
+	delete account;
+	account = nullptr;
+	account2 = nullptr;*/
+{
+	SavingsAccount account;
+	SavingsAccount account2 = account;
+}
 	/*unique_ptr<BankAccount> a = make_unique<SavingsAccount>(600);//heap
 	cout<<a->get_balance()<<"\n";
 	unique_ptr<BankAccount> c = make_unique<CheckingAccount>(100);

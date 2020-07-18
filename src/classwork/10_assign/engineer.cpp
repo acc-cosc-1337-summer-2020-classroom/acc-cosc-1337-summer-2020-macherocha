@@ -1,7 +1,16 @@
 //cpp
+#include "engineer.h"
 
-void Engineer::get_pay()
+
+
+Engineer::Engineer (double pay, double bonus) : Employee()
 {
-    double ENGpay = base_pay + bonus;
-    return ENGpay;
+    base_pay = pay;
+    this->bonus = bonus;
+
+}
+
+double Engineer::get_pay() const
+{
+    return base_pay + bonus;
 }
