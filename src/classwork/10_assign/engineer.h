@@ -8,8 +8,8 @@ class Engineer : public Employee
 {
 public:
     Engineer (double pay, double bonus);
-    virtual double get_pay() const;
-    ~Engineer();
+    double get_pay() const;
+    ~Engineer(){};//missing empty function code block w curly braces
 
 private:
     double base_pay;
