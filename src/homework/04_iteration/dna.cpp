@@ -9,9 +9,8 @@ Return quotient.
 
 double get_gc_content(const std::string& str)
 {
-    for()
-        if DNAletter 
-        averageGC = std::count("G", "C")/ str.length();
+    averageGC = std::count("G", "C")/ str.length();
+
     return averageGC;
 }
 
@@ -21,8 +20,7 @@ accepts a string parameter and returns a string reversed.
 */
 std::string get_reverse_string(std::string str)
 {
-    (str);
-    cout<<str;
+    str = 0;
     return 0;
 }
 
@@ -42,3 +40,4 @@ std::string get_dna_complement(std::string dna)
     reverse_string = get_reverse_string(dna)
     
 }
+
